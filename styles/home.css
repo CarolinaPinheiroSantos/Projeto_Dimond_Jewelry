@@ -1,0 +1,149 @@
+/* definições gerais */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'inter',sans-serif;
+}
+/* começo do topo*/
+body {
+    background-color: #FBFBFB;
+}
+
+.first{
+    background-color: #CD9296;
+    width: 100%;
+    height: 2.3125rem;
+    align-items: center;
+
+}
+#text-first{
+    font-size: 1rem;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5625rem;
+}
+.header-top{
+    background-color: #FBFBFB;
+    height: 8.4375rem;
+    display: flex;
+    padding: 1.875rem 1.875rem 1.875rem 1.875rem;
+    justify-content:space-between ;
+}
+.logo{
+    align-items: center;
+}
+#logo{
+    height: 6.25rem;
+    width: 100%;
+}
+/* barra de pesquisa */
+.search-box{
+    display: flex;
+    align-items: center;
+}
+.search-txt::placeholder {
+    color: #ffffff; 
+    font-style: italic;
+}
+.search-box input{
+    background-color: #CD9296;
+    border: none;
+    border-radius: 3.125rem;
+    height: 3rem;
+    width: 37.25rem;
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    outline: none;
+}
+.search-txt {
+    border: 0.0625rem solid #ccc;
+    transition: border 0.3s ease;
+    padding-left: 1.25rem;
+}
+.search-txt:focus {
+    background-color: #F0BDC1;
+    transition: background-color 0.3s;
+    border: 0.125rem solid #CD9296;
+    outline: none;
+}
+.search-box i{
+    position: relative;
+    right: 2.5rem;
+    color:#FFFFFF;
+}
+/* icones */
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 9rem;
+    color: #CD9296; 
+    font-size: 1.3rem;
+}
+.bi-instagram::before{
+    color: #CD9296;
+}
+.bi-person::before{
+    font-size: 1.5rem;
+}
+/* barra de navegação */
+.menu{
+    margin: 0 30rem 0 30rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding-left: 0;
+    color: #CD9296;
+}
+.text-nav{
+    text-decoration: none;
+    color: #CD9296;
+}
+.text-nav a:active{
+    color: #CD9296;
+}
+/* banner */
+.banner{
+    padding-top: 2rem;
+    position: relative;
+}
+#compre-aqui{
+    border: none;
+    border-radius: 10rem;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 12rem;
+    background-color: #CD9296; 
+    position: absolute;
+    left: 10rem;
+    top: 32rem;
+    height: 5rem;
+    width: 15rem;
+    transition: 0.3s ease;
+}
+#compre-aqui:hover{
+    transform: scale(1.1);
+}
+.banner img{
+    width: 100%;
+    height: 44.5625rem;
+}
+/* Final do topo */
+/* começo do Corpo */
+main{
+    width: 100%;
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+.text{
+    height: 8rem;
+    display: flex;
+    align-items: center;
+}
+#texto-text{
+    font-size: 2rem;
+    color: #989595;
+}

@@ -1,0 +1,309 @@
+/* definições gerais */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'inter',sans-serif;
+}
+/* top ocomeço */
+body {
+    background-color: #FBFBFB;
+}
+
+.first{
+    background-color: #CD9296;
+    width: 100%;
+    height: 2.3125rem;
+    align-items: center;
+
+}
+#text-first{
+    font-size: 1rem;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5625rem;
+}
+.header-top{
+    background-color: #FFFFFF;
+    height: 8.4375rem;
+    display: flex;
+    padding: 1.875rem 1.875rem 1.875rem 1.875rem;
+    justify-content:space-between ;
+}
+.logo{
+    align-items: center;
+}
+#logo{
+    height: 6.25rem;
+    width: 100%;
+}
+/* barra de pesquisa */
+.search-box{
+    display: flex;
+    align-items: center;
+}
+.search-txt::placeholder {
+    color: #ffffff; 
+    font-style: italic;
+}
+.search-box input{
+    background-color: #CD9296;
+    border: none;
+    border-radius: 3.125rem;
+    height: 3rem;
+    width: 37.25rem;
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    outline: none;
+}
+.search-txt {
+    border: 0.0625rem solid #ccc;
+    transition: border 0.3s ease;
+    padding-left: 1.25rem;
+}
+.search-txt:focus {
+    background-color: #F0BDC1;
+    transition: background-color 0.3s;
+    border: 0.125rem solid #CD9296;
+    outline: none;
+}
+.search-box i{
+    position: relative;
+    right: 2.5rem;
+    color:#FFFFFF;
+}
+/* icones */
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 9rem;
+    color: #CD9296; 
+    font-size: 1.3rem;
+}
+.bi-instagram::before{
+    color: #CD9296;
+}
+.bi-person::before{
+    font-size: 1.5rem;
+}
+/* banner */
+.banner{
+    padding-left: 15rem;
+    padding-right: 15rem;
+    position: relative;
+}
+#compre-aqui{
+    border: none;
+    border-radius: 10rem;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 12rem;
+    background-color: #CD9296; 
+    position: absolute;
+    left: 19rem;
+    top: 29rem;
+    height: 4rem;
+    width: 14rem;
+    transition: 0.3s ease;
+}
+#compre-aqui:hover{
+    transform: scale(1.1);
+}
+.banner img{
+    width: 100%;
+    height: 44.5625rem;
+}
+/* topo final */
+
+/* meio começo */
+main{
+    width: 100%;
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+.text{
+    height: 8rem;
+    display: flex;
+    align-items: center;
+}
+#texto-text{
+    font-size: 2rem;
+    color: #989595;
+}
+/* produtos */
+.produto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.item-produtos{
+    height: 32rem;
+    width: 20rem;
+    border-radius: 2rem;
+    border: solid 0.1rem #D3D3D3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+#produto1{
+    height: 15rem;
+}
+#produto2{
+    width: 9rem;
+}
+#produto3{
+    height: 14rem;
+}
+#produto4{
+    height: 14rem;
+}
+#produto6{
+    height: 12rem;
+    width: 12rem;
+}
+#produto7{
+    height: 13rem;
+}
+#produto8{
+    height: 14rem;
+}
+.text1-produto{
+    font-size: 1.1rem;
+}
+.text2-produto{
+    font-size: 2rem;
+    color: #CD9296;
+}
+.text3-produto{
+    font-size: 0.8rem;
+}
+.comprar-produto{
+    height: 2.5rem;
+    width: 9.5rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: #CD9296;
+    color: #FFFFFF;
+    transition: 0.3s ease;
+}
+.comprar-produto:hover{
+    background-color: #E4C8C9;
+    transform: scale(1.1);
+}
+/* categorias */
+.categoria{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 3.125rem;
+}
+.itens-categria:hover{
+    transform: scale(1.1);
+}
+.itens-categria{
+    background-color: #D89B9D;
+    height: 12.5rem;
+    width: 12.5rem;
+    border-radius: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#brincos{
+    height: 5rem;
+}
+
+#pulseira{
+    height: 8rem;
+}
+
+#relogio{
+    height: 11rem;
+}
+
+#colar{
+    height: 12rem;
+}
+
+#anel{
+    height: 4rem;
+}
+.nome-categoria{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.texto-categoria{
+    text-align: center;
+    width: 12.5rem;
+}
+
+/* promocao */
+.promocao{
+    height: 35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-promocao{
+    position: relative;
+    width: 25rem;
+    height: 25.8rem;
+    border-radius: 3rem;
+}
+/* final meio */
+
+/* final */
+.tirinha{
+    display: flex;
+    justify-content: center;
+}
+
+.final{
+    height: 22rem;
+    background-color: #CD9296;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.titulo-final{
+    color: #FFFFFF;
+    font-size: 1.3rem;
+}
+.bloco-final1{
+    display: flex;
+    flex-direction: column;
+    gap: 0.30rem;
+}
+.bloco-final2{
+    display: flex;
+    flex-direction: column;
+    gap: 0.50rem;
+}
+.bloco-final3{
+    display: flex;
+    flex-direction: column;
+    gap: 0.50rem;
+}
+.text-final{
+    color: #FFFFFF;
+}
+.voltar-inicio{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CD9296;
+}
+.text-voltar-inicio{
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-decoration-color: #FFFFFF;
+}
