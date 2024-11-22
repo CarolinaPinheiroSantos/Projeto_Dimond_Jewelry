@@ -109,8 +109,7 @@ body {
 /* banner */
 .banner{
     padding-top: 2rem;
-    margin-left: 12rem;
-    margin-right: 12rem;
+    margin: 2rem 0rem 2rem 0rem;
     position: relative;
 }
 #compre-aqui{
@@ -132,15 +131,15 @@ body {
 }
 .banner img{
     width: 100%;
-    height: 44.5625rem;
+    height: 40rem;
 }
 /* Final do topo */
 
 /* começo do Corpo */
 main{
     width: 100%;
-    padding-left: 15rem;
-    padding-right: 15rem;
+    padding-left: 13rem;
+    padding-right: 13rem;
 }
 .text{
     height: 8rem;
@@ -150,6 +149,24 @@ main{
 #texto-text{
     font-size: 2rem;
     color: #989595;
+}
+/* imagem dos "produtos perfeitos e feitos para voce"*/
+/* .carrousel div.product-card.idprod:nth-of-type(1) div img{
+    width: 15rem;
+} */
+
+/* promocao */
+.promocao{
+    height: 35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-promocao{
+    position: relative;
+    width: 25rem;
+    height: 25.8rem;
+    border-radius: 3rem;
 }
 /* final do corpo */
 /* rodapé */
@@ -251,6 +268,8 @@ main{
 .texto-categoria{
     text-align: center;
     width: 12.5rem;
+    font-size: 1.1rem;
+    color: #989595;
 }
 /* Meu css */
 
@@ -351,16 +370,11 @@ main{
     border-radius: 15px;
     box-shadow: 2px 4px 4px 1px rgba(0, 0, 0, 0.04);
 }
-/* FDSS */
-.product-card img {
-    width:100%;
-    /* border-radius: 15px; */
-}
 
 .product-card-btn {
     width: 100%;
     padding: 5px 20px;
-    background-color: ;
+    background-color: #CD9296;
     border-radius: 15px;
     border: none;
     background-color: #CD9296;
@@ -400,8 +414,7 @@ main{
 /* FDS */
 .section-product-carrousel img {
     width: 12rem;
-    height: 17rem;
-    
+    height: 16rem;
 }
 
 .prev, .next {
@@ -565,11 +578,11 @@ main{
 
 .shop_btn {
     padding: 16px 32px;
-    color: ;
+    color: #FFFFFF;
     border-radius: 5px;
     border: none;
     text-transform: uppercase;
-    background-color: ;
+    background-color: #CD9296;
 }
 
 .freight_container {
@@ -832,13 +845,3 @@ main{
     display: flex;
     flex-direction: column;
 }
-
-
-
-
-
-
-
-
-
-

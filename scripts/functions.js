@@ -8,6 +8,7 @@ export function loadProducts(productList, load) {
           <img id="${produto.codigoProduto}"
             src="${produto.imagemProduto.img1}"
             alt="${produto.tituloProduto}"
+            class="imagem-pratas"
           />
         </div>
         <div class="product-card-info-container">
