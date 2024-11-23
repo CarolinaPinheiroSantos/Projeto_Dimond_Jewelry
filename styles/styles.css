@@ -5,7 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'inter',sans-serif;
-}
+}                   
 /* começo do topo*/
 body {
     background-color: #FBFBFB;
@@ -149,6 +149,18 @@ main{
 #texto-text{
     font-size: 2rem;
     color: #989595;
+}
+/* sobre nos */
+#sobre-nos{
+    width: 10rem;
+    margin:15rem 0rem 15rem 0rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.text-sobre{
+    font-size: 2rem;
+    color: #989595; 
 }
 /* imagem dos "produtos perfeitos e feitos para voce"*/
 /* .carrousel div.product-card.idprod:nth-of-type(1) div img{
