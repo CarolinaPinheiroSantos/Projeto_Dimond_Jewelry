@@ -75,6 +75,10 @@ body {
     color:#FFFFFF;
 }
 /* icones */
+a {
+    text-decoration: none;
+    color: inherit;
+}
 .icons{
     display: flex;
     align-items: center;
@@ -84,6 +88,9 @@ body {
     font-size: 1.3rem;
 }
 .bi-instagram::before{
+    color: #CD9296;
+}
+.bi-sacola::before{
     color: #CD9296;
 }
 .bi-person::before{
@@ -156,12 +163,27 @@ main{
     margin:15rem 0rem 15rem 0rem;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
-.text-sobre{
-    font-size: 2rem;
-    color: #989595; 
+#sobre-nos p{
+    width: 40rem;
+    font-size: 1.3rem;
+    gap: 1rem;
+    font-weight: none;
+    color: #CD9296;
 }
+
+#sobre-nos h3{
+    height: 8rem;
+    font-weight: 4rem;
+    font-size: 4rem;
+    color: #CD9296;
+}
+#sobre-nos img{
+    height: 40rem;
+}
+
 /* imagem dos "produtos perfeitos e feitos para voce"*/
 /* .carrousel div.product-card.idprod:nth-of-type(1) div img{
     width: 15rem;
@@ -188,7 +210,7 @@ main{
 }
 
 .final{
-    height: 13rem;
+    height: 14rem;
     background-color: #CD9296;
     display: flex;
     flex-direction: row;
@@ -244,7 +266,7 @@ main{
     transform: scale(1.1);
 }
 .itens-categria{
-    background-color: #D89B9D;
+    /* background-color: #D89B9D; */
     height: 12.5rem;
     width: 12.5rem;
     border-radius: 6.25rem;
@@ -283,16 +305,37 @@ main{
     font-size: 1.1rem;
     color: #989595;
 }
-/* Meu css */
+.imagem-pratas{
+    width: 12rem;
+    height: 16rem;
+}
 
+.filtros{
+    width: 13rem;
+}
+.filtros h5{
+    font-size: 2rem;
+    color: #989595;
+    height: 4rem;
+}
+.filtros label{
+    font-size: 1.1rem;
+}
+.filtro-produtos{
+    display: flex;
+}
 
+#product-container{
+    padding-left: 0rem;
+}
 
-
-
-
-
-
-
+.product.text-container{
+    padding: 0rem;
+}
+.product-category{
+    padding-left: 5rem;
+}
+/*Final do Meu css */
 
 /* CSS dos Componentes do Projeto - Utilize o inspecionar elementos antes de modificar os valores */
 
@@ -330,6 +373,18 @@ main{
     /* background-color: ; */
     border-radius: 15px;
 }
+.filtros{
+    padding-top: 6rem;
+}
+
+#product-category{
+    font-size: 2rem;
+    color: #FBFBFB;
+}
+#product-nome-produto{
+    width: 40rem;
+    font-size: 2rem;
+}
 
 /* produtooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo*/
 
@@ -345,7 +400,7 @@ main{
 .product-card-title{
     height: 36px;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    /* -webkit-line-clamp: 2rem; */
     -webkit-box-orient: vertical;  
     overflow: hidden;
     text-overflow: ellipsis;
@@ -403,13 +458,17 @@ main{
 
 /* produtoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo */
 .section-product-grid {
-    padding-top: 1.125em;
+    width: 40rem;
+    height: 105rem;
+    padding-top: 5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: flex-end;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: start;
-    justify-items: center;
+    /* justify-items: center; */
     column-gap: 16px;
     row-gap: 16px; 
+    margin-left: auto;
 }
 
 .section-product {
@@ -428,7 +487,9 @@ main{
     width: 12rem;
     height: 16rem;
 }
-
+.bi-arrow-left-circle-fill , .bi-arrow-right-circle-fill{
+    color: #CD9296;
+}
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -443,19 +504,34 @@ main{
   
   .prev {
     left: -70px;
+    padding-top: 120rem;
+    padding-left: 10rem
+  }
+  #prev-2{
+    left: -70px;
+    padding-top: 300rem;
+    padding-left: 10rem
   }
   
   .next {
     right: -70px;
+    padding-top: 120rem;
+    padding-right: 10rem;
   }
-
+  #next-2{
+    right: -70px;
+    padding-top: 300rem;
+    padding-right: 10rem;
+  }
   .grid_col_1 {
+    padding-left: 5rem;
     grid-area: col1;
-    padding:25px
+    /* padding:25px */
    
 }
 
 .grid_col_2 {
+    width: 25rem;
     grid-area: col2;
     padding: 25px;
 }
@@ -480,6 +556,7 @@ main{
     font-weight: 400;
     font-size: 0.875em;
     padding-bottom: 5px;
+    color: #989595;
 }
 
 .product.main-text {
@@ -494,9 +571,10 @@ main{
 }
 
 .images_selector{
+    
     display: flex;
     flex-direction: column;
-    flex-basis: 120px;
+    flex-basis: 140px;
     align-items: center;
 }
 
@@ -513,6 +591,7 @@ main{
     vertical-align: -0.125em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
 }
 
 .images_selector ul{
@@ -531,7 +610,7 @@ main{
 
 .images_main {
     flex-basis: 565px;
-    padding-top: 75px;
+    padding-top: 30px;
 }
 
 .images_main img{
@@ -559,6 +638,9 @@ main{
 }
 
 .product_price_container h2{
+    display: flex;
+    align-items: end;
+    height: 4rem;
     font-size: 2em;
     font-weight: 700;
     padding-bottom: 16px;
@@ -567,11 +649,12 @@ main{
 }
 
 .product_price_container h5{
+    width: 30rem;
     font-size: 0.875em;
     font-weight: 400;
     padding-bottom: 10px;
     line-height: 18px;
-
+    color: #989595;
 }
 
 .quantity {
@@ -581,11 +664,12 @@ main{
 }
 
 .quantity input{
-    border:1px solid ;
+    border:none;
     border-radius: 5px;
     padding:4px 8px;
-    width: 100%;
+    width: 5rem;
     font-size: 20px;
+    background-color: #e0dfdf;
 }
 
 .shop_btn {
@@ -595,10 +679,12 @@ main{
     border: none;
     text-transform: uppercase;
     background-color: #CD9296;
+    width: 18rem;
 }
 
 .freight_container {
-    border: 1px solid ;
+    /* border: 1px solid ; */
+    width: 22.5rem;
     padding: 8px 16px;
     border-radius: 5px;
     margin-bottom: 30px;
@@ -613,17 +699,26 @@ main{
 
 
 .freight_container form label{
-   font-size: 0.875em;
+    font-size: 1.2rem;
+
 }
 
 .freight_container form input[type="text"]{
-    border:1px solid ;
-    border-radius: 5px;
-    padding:4px 8px;
-    width: 100%;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #CD9296;
+    width: 50rem;
+    height: 3rem;
  }
 
-
+.freight_ok{
+    width: 15rem;
+    height: 3rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #CD9296;
+    color: #ffffff;
+}
 
  .button {
     padding:4px 8px;
@@ -757,18 +852,23 @@ main{
 }
 
 .total_container {
+    border: none;
     align-items: stretch;
-    border: 1px solid ;
     padding: 16px;
     border-radius: 5px;
     margin-bottom: 15px;
+    height: 10rem;
 }
-
+.resumo{
+    height: 10rem;
+}
 .checkout_btn {
         margin-bottom: 15px;
         width: 100%;
         font-size: 20px;
         padding: 10px 0px;
+        color: #CD9296;
+        border-radius: 2rem;
     }
 
 .total {
