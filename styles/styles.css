@@ -324,7 +324,7 @@ main{
     width: 12rem;
     height: 16rem;
 }
-
+/* filtros */
 .filtros{
     width: 13rem;
 }
@@ -338,6 +338,7 @@ main{
 }
 .filtro-produtos{
     display: flex;
+    flex-direction: row;
 }
 
 #product-container{
@@ -350,6 +351,43 @@ main{
 .product-category{
     padding-left: 5rem;
 }
+/* fomulario */
+.formulario-page{
+    padding-top: 10rem;
+}
+textarea, button{
+    border-radius: 2rem;
+}
+.campo{
+    margin-bottom: 1rem;
+}
+.campo label, .grid_col_1 label{
+    margin-bottom: 1rem;
+    color: #989595;
+    display: block;
+}
+#Comentário{
+    border: 0.2rem solid #e4e4e4;
+}
+#div-button-formulario{
+    padding-bottom: 8rem;
+}
+#button-formulario{
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #CD9296;
+    color: #ffffff;
+}
+#grid_col_1_formulario{
+    padding-left: 15rem;
+}
+#grid_col_1_formulario h2{
+    font-size: 3rem;
+}
+
 /*Final do Meu css */
 
 /* CSS dos Componentes do Projeto - Utilize o inspecionar elementos antes de modificar os valores */
@@ -518,24 +556,24 @@ main{
   }
   
   .prev {
-    left: -70px;
-    padding-top: 120rem;
+    left: -30px;
+    padding-top: 50rem;
     padding-left: 10rem
   }
   #prev-2{
-    left: -70px;
-    padding-top: 300rem;
+    left: -30px;
+    padding-top: 200rem;
     padding-left: 10rem
   }
   
   .next {
-    right: -70px;
-    padding-top: 120rem;
+    right: -30px;
+    padding-top: 50rem;
     padding-right: 10rem;
   }
   #next-2{
-    right: -70px;
-    padding-top: 300rem;
+    right: -30px;
+    padding-top: 200rem;
     padding-right: 10rem;
   }
   .grid_col_1 {
@@ -774,14 +812,17 @@ main{
     
 }
 
+
 .freight_pricing:nth-child(4){
-    background-color: #EAFFE7;
-   
+    background-color: #e0dfdf;
+    border-radius: 2rem;
+    border: none;
 }
 
 .freight_pricing:nth-child(5){
-    background-color: #FFFDE7;
-   
+    background-color: #e0dfdf;
+    border-radius: 2rem;
+    border: none;
 }
 
 .freight_pricing:nth-child(6){
