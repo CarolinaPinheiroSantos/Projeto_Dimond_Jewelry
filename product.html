@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diamond Jewelry</title>
   <link rel="stylesheet" href="./styles/styles.css" />
-  <script type="module" src="./scripts/product.js" defer></script>
+  <script type="module" src="./scripts/home.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 </head>
@@ -18,7 +19,7 @@
     <!-- barra inicial -->
     <div class="header-top">
         <div class="Logo">
-          <a href="./index.html"><img src="/imgens/Logo.png" alt="logo Diamond Jewelry" id="logo"></a>
+            <a href="./index.html"><img src="/imgens/Logo.png" alt="logo Diamond Jewelry" id="logo"></a>
         </div>
         <div class="search-box">
             <input class="search-txt" type="text" placeholder="Pesquisar...">
@@ -32,18 +33,18 @@
             <i class="bi bi-person" id="usuario"></i>
         </div>
     </div>
-      <!-- barra de navegação -->
+     <!-- barra de navegação -->
     <nav class="navbar">
       <ul class="menu">
+        <li><a href="./products.html" class="text-nav">Todos os produtos</a></li>
         <li>Aneis</li>
         <li>Brincos</li>
         <li>Colares</li>
         <li>Pulseiras</li>
         <li>Relógios</li>
-        <li><a href="./products.html" class="text-nav">Todos os produtos</a></li>
+        <li><a href="./sobreNos.html" class="text-nav">Sobre nós</li></a>
       </ul>
     </nav>
-    </div>
   </header>
 <!-- Componente Pagina individual de Produtos -->
     <main class="product main-content container" id="product-container">
@@ -152,10 +153,10 @@
               <p class="titulo-final">Sua Conta</p>
               <p class="text-final">Minha conta</p>
               <p class="text-final">Minhas compras</p>
-              <p class="text-final">Meu carrinho</p>
+              <a href="./checkout.html"></a><p class="text-final">Meu carrinho</p></a>
           
               <p class="titulo-final">Institucional</p>
-              <p class="text-final">Sobre nós</p>
+              <a href="./sobreNos.html"><p class="text-final">Sobre nós</p></a>
               <p class="text-final">Atacado</p>
               <p class="text-final">Garantia</p>
               <p class="text-final">Pagamento e envio</p>
@@ -176,7 +177,7 @@
               <p class="text-final">Política de devolução</p>
               <p class="text-final">horário de atendimento</p>
               <p class="text-final">Rastreie meu pedido</p>
-              <p class="text-final">Fale conosco</p>
+              <a href="./fomulario.html"><p class="text-final">Fale conosco</p></a>
           </div>
           <div class="bloco-final4">
               <p class="titulo-final">Formas de Pagamento</p>
@@ -187,5 +188,5 @@
           <a href="#"  class="text-voltar-inicio"><p>Voltar ao início</p></a>
       </div>
     </footer>
-</body>
-</html>
+  </body>
+  </html>

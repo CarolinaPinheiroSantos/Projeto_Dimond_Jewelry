@@ -326,19 +326,13 @@ main{
 }
 /* filtros */
 .filtros{
-    width: 13rem;
+    width: 20rem;
+    display: block;
 }
 .filtros h5{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #989595;
     height: 4rem;
-}
-.filtros label{
-    font-size: 1.1rem;
-}
-.filtro-produtos{
-    display: flex;
-    flex-direction: row;
 }
 
 #product-container{
@@ -512,11 +506,11 @@ textarea, button{
 /* produtoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo */
 .section-product-grid {
     width: 40rem;
-    height: 105rem;
+    height: 150rem;
     padding-top: 5rem;
     display: grid;
     justify-content: flex-end;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: start;
     /* justify-items: center; */
     column-gap: 16px;
@@ -535,10 +529,10 @@ textarea, button{
     position: relative;
     overflow: hidden;
 }
-/* FDS */
+
 .section-product-carrousel img {
-    width: 12rem;
-    height: 16rem;
+    width: 20rem;
+    height: 20rem;
 }
 .bi-arrow-left-circle-fill , .bi-arrow-right-circle-fill{
     color: #CD9296;
@@ -557,23 +551,23 @@ textarea, button{
   
   .prev {
     left: -30px;
-    padding-top: 50rem;
+    padding-top: 110rem;
     padding-left: 10rem
   }
   #prev-2{
     left: -30px;
-    padding-top: 200rem;
+    padding-top: 270rem;
     padding-left: 10rem
   }
   
   .next {
     right: -30px;
-    padding-top: 50rem;
+    padding-top: 110rem;
     padding-right: 10rem;
   }
   #next-2{
     right: -30px;
-    padding-top: 200rem;
+    padding-top: 270rem;
     padding-right: 10rem;
   }
   .grid_col_1 {
