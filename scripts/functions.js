@@ -8,6 +8,7 @@ export function loadProducts(productList, load) {
           <img id="${produto.codigoProduto}"
             src="${produto.imagemProduto.img1}"
             alt="${produto.tituloProduto}"
+            class="imagem-pratas"
           />
         </div>
         <div class="product-card-info-container">
@@ -64,14 +65,14 @@ productTitle.children[1].innerText = `${produto.tituloProduto}`
 
  <div class="images_selector">
 
-   <i class="bi bi-chevron-double-up"></i>
+
  <ul>
    <li><img src="${produto.imagemProduto.img1}" alt="" class="product_thumb"></li>
    <li><img src="${produto.imagemProduto.img2}"" alt="" class="product_thumb"></li>
    <li><img src="${produto.imagemProduto.img3}"" alt="" class="product_thumb"></li>
    <li><img src="${produto.imagemProduto.img4}"" alt="" class="product_thumb"></li>
  </ul>
- <i class="bi bi-chevron-double-down"></i>
+
  </div>
  <div class="images_main">
    <img src="${produto.imagemProduto.img1}" alt="">
@@ -143,36 +144,30 @@ export function loadCartItem(cartItens,cartItensHTML){
 
   }
   
+
+
   export function removeCartItem(sacolaCompras) {
-    let botaoDel = document.querySelectorAll("button.remove"); /* remover produto do carrinho */
-    let cartItens = document.querySelector(".grid_col_1");
-  
+    let botaoDel = document.querySelectorAll("button.remove") /* remover produto do carrinho */
+    let cartItens = document.querySelector(".grid_col_1")
     botaoDel.forEach(botao => botao.addEventListener('click', (event) => {
-      let item = event.target.closest(".cart_item");  // Seleciona o elemento do item do carrinho
-      let itemId = item.id;
+      let item = event.target.parentElement.parentElement.parentElement
+      console.log(item)
+      cartItens.removeChild(item)
+      console.log(item.id)
+      let index = sacolaCompras.findIndex(i => i.codigoProduto == item.id)
+      console.log(index)
+      sacolaCompras.splice(index, 1)
+      console.log(sacolaCompras)
+      localStorage.setItem('listaCompras', JSON.stringify(sacolaCompras))
   
-      // Remove o elemento do DOM
-      cartItens.removeChild(item);
-  
-      // Encontra e remove o item da lista de compras
-      let index = sacolaCompras.findIndex(i => i.codigoProduto == itemId);
-      if (index > -1) {
-        sacolaCompras.splice(index, 1);
-      }
-  
-      // Atualiza o total no localStorage
-      localStorage.setItem('listaCompras', JSON.stringify(sacolaCompras));
-  
-      // Recalcula o total e atualiza a interface
+      // Update the price element here
       const total = cartTotal(sacolaCompras);
       localStorage.setItem('totalValue', total);
-  
-      const priceElement = document.querySelector('.total.container-flex:nth-child(1) h3:nth-child(2)');
-      priceElement.innerText = `R$ ${total.toFixed(2)}`;
-      updateTotal()
+      const price = document.querySelector('.total.container-flex:nth-child(1) h3:nth-child(2)');
+      price.innerHTML = `R$ ${total.toFixed(2)}`;
+     
     }));
   }
- 
 
 
 export function shop(pedidos){
@@ -199,44 +194,4 @@ alert("pedido realizado com sucesso")
 localStorage.removeItem("listaCompras");
 localStorage.removeItem("totalValue");
 window.location = "./index.html"
-updateTotal()
 } 
-
-
-function obterFreteSelecionado() {
-  // Seleciona o botão de rádio marcado
-  const freteSelecionado = document.querySelector('input[name="frete"]:checked');
-
-  // Verifica se algum botão está selecionado
-  if (freteSelecionado) {
-    const valorFrete = parseFloat(freteSelecionado.value);
-    console.log(`Frete selecionado: R$ ${valorFrete}`);
-    return valorFrete;
-  } else {
-    alert("Selecione uma opção de frete.");
-    return 0;
-  }
-}
-export function updateTotal() {
-  const subtotalElement = document.getElementById('subtotal');
-  const subtotal = parseFloat(subtotalElement.innerText.replace('R$', '').trim()) || 0;
-
-  const selectedFreight = document.querySelector('input[name="frete"]:checked');
-  const freightValue = selectedFreight ? parseFloat(selectedFreight.value) : 0;
-
-  // Atualiza a interface
-  document.getElementById('frete').innerText = `R$ ${freightValue.toFixed(2)}`;
-  document.getElementById('totalCarrinho').innerText = `R$ ${(subtotal + freightValue).toFixed(2)}`;
-
-  // Armazena no localStorage
-  localStorage.setItem('subtotal', subtotal.toFixed(2));
-  localStorage.setItem('frete', freightValue.toFixed(2));
-  localStorage.setItem('totalCarrinho', (subtotal + freightValue).toFixed(2));
-}
-
-// Evita erro ao tentar carregar frete sem valor selecionado
-document.querySelectorAll('input[name="frete"]').forEach(input => {
-  input.addEventListener('change', updateTotal);
-});
-
-document.addEventListener('DOMContentLoaded', updateTotal);
