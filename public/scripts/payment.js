@@ -1,4 +1,4 @@
-import {shop} from "./functions.js";
+mport {shop} from "./functions.js";
 let sacolaCompras = JSON.parse(localStorage.getItem("listaCompras")) 
 let totalValue = parseFloat(localStorage.getItem("totalValue"));
 console.log(totalValue)

@@ -170,29 +170,29 @@ export function loadCartItem(cartItens,cartItensHTML){
   }
  
  
-export function shop(pedidos){
+  export function shop(pedidos){
  
-const form = document.querySelector('#billing form');
-const inputs = form.querySelectorAll('input,select');
-const inputValues = {};
-inputs.forEach((input) => {
-  if (input.type!== 'submit' && input.type!== 'button') {
-    inputValues[input.name] = input.value;
-  }
-});
-console.log(inputValues);
-const order = {
-   id: pedidos.length > 0? pedidos[pedidos.length - 1].id + 1 : 1,
-   address:{...inputValues},
-   items: JSON.parse(localStorage.getItem("listaCompras")),
-   totalValue: parseFloat(localStorage.getItem("totalValue"))
-};
- 
-pedidos.push(order);
-localStorage.setItem("pedidos", JSON.stringify(pedidos));;
-alert("pedido realizado com sucesso")
-localStorage.removeItem("listaCompras");
-localStorage.removeItem("totalValue");
-window.location = "./index.html"
-}
+    const form = document.querySelector('#billing form');
+    const inputs = form.querySelectorAll('input,select');
+    const inputValues = {};
+    inputs.forEach((input) => {
+      if (input.type!== 'submit' && input.type!== 'button') {
+        inputValues[input.name] = input.value;
+      }
+    });
+    console.log(inputValues);
+    const order = {
+       id: pedidos.length > 0? pedidos[pedidos.length - 1].id + 1 : 1,
+       address:{...inputValues},
+       items: JSON.parse(localStorage.getItem("listaCompras")),
+       totalValue: parseFloat(localStorage.getItem("totalValue"))
+    };
+   
+    pedidos.push(order);
+    localStorage.setItem("pedidos", JSON.stringify(pedidos));;
+    alert("pedido realizado com sucesso")
+    localStorage.removeItem("listaCompras");
+    localStorage.removeItem("totalValue");
+    window.location = "./index.html"
+    }
  
