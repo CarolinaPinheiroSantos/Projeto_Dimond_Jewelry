@@ -151,6 +151,9 @@ a {
 }
 
 /* main index */
+#special-main{
+    height: 45rem;
+}
 main{
     width: 100%;
     padding-left: 13rem;
@@ -348,7 +351,7 @@ textarea, button{
 /* sobre nos */
 .sobre-nos{
 
-    margin:2rem 0rem 15rem 0rem;
+    margin:2rem 0rem 8rem 0rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -577,14 +580,14 @@ textarea, button{
   .grid_col_1 {
     padding-left: 5rem;
     grid-area: col1;
-    /* padding:25px */
+    padding:25px
    
 }
 
 .grid_col_2 {
     width: 25rem;
     grid-area: col2;
-    padding: 25px;
+    padding: 20px;
 }
 
 
@@ -822,6 +825,7 @@ textarea, button{
     background-color: #e0dfdf;
     border-radius: 2rem;
     border: none;
+    
 }
 
 .freight_pricing:nth-child(6){
